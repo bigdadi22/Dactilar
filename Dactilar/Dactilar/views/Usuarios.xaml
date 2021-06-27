@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Dactilar.views.Usuarios">
+    <ContentPage.Content>
+
+        <Grid>
+
+            <Image Source="ofi.jpg" Aspect="AspectFill"/>
+            <BoxView Color="MediumSpringGreen" Opacity="0.8"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="logo.png" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30" />
+
+                <StackLayout Grid.Row="1" Padding="30,20">
+                    <ListView x:Name="ListaUsuarios" ItemSelected="SlUsu">
+                        <ListView.ItemTemplate>
+                            <DataTemplate >
+                                <TextCell Text="{Binding Username}" Detail="{Binding Password}" ></TextCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                    <Button Text="Regresar" BackgroundColor="White" BorderRadius="20" TextColor="MediumSpringGreen"  Clicked="btnRegr"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

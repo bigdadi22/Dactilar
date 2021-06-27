@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Dactilar.MainPage">
+
+    <ContentPage.Content>
+
+    <Grid>
+
+        <Image Source="ofi.jpg" Aspect="AspectFill"/>
+        <BoxView Color="#f8f321" Opacity="0.8"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="0" Source="logo.png" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30" />
+
+            <StackLayout Grid.Row="1" Padding="30,20">
+                <Entry Placeholder="Usuario" PlaceholderColor="Black" x:Name="Entry_Username"/>
+                <Entry Placeholder="Contraseña" PlaceholderColor="Black" x:Name="Entry_Password"/>
+                    <Button Text="Iniciar Sesion" BackgroundColor="White" BorderRadius="20" TextColor="Black" x:Name="Btn_signin" Clicked="SignInProcedure"/>
+                    <Button Text="Registrate" BackgroundColor="White" BorderRadius="20" TextColor="Black"  Clicked="btnreg"/>
+                </StackLayout>
+        </Grid>
+
+    </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

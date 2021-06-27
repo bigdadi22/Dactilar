@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Dactilar.views.Eliminar">
+    <ContentPage.Content>
+
+        <Grid>
+
+            <Image Source="ofi.jpg" Aspect="AspectFill"/>
+            <BoxView Color="MediumPurple" Opacity="0.8"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="logo.png" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30" />
+
+                <StackLayout Grid.Row="1" Padding="30,20">
+                    <Label x:Name="mensaje"/>
+                    <Entry Placeholder="Nombre del producto" PlaceholderColor="White" x:Name="nomPrd"/>
+                    <Entry Placeholder="Cantidad" PlaceholderColor="White" x:Name="canPrd"/>
+                    <Entry Placeholder="Precio" PlaceholderColor="White" x:Name="cosPrd"/>
+                    <Button Text="Eliminar" BackgroundColor="White" BorderRadius="20" TextColor="MediumPurple" Clicked="btnEli"/>
+                    <Button Text="Actualizar" BackgroundColor="White" BorderRadius="20" TextColor="MediumPurple" Clicked="btnAct"/>
+                    <Button Text="Regresar" BackgroundColor="White" BorderRadius="20" TextColor="MediumPurple"  Clicked="btnRegr"/>
+                </StackLayout>
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
